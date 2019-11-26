@@ -1,6 +1,6 @@
-# R2D2BA #
+# UGDR #
 ------------
-R2D2BA pipeline allows you to follow allele variations between reference  and RTG genomes.
+UGDR pipeline allows you to follow allele variations between reference  and RTG genomes.
 
 This script extracts information from VCF files to give a human readable 
 files.  It summarizes allele variations, and defines regions of recombination.

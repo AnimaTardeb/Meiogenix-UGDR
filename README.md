@@ -1,10 +1,9 @@
 # UGDR #
 
-
 This repository provides the UGDR pipeline that allows users to detect recombination between a reference/parent and a recombined yeast.
 This script extracts information from VCF files, defines regions of recombination, Calculate normalized depth of coverage and plot recombination and depth of coverage.
 
-## Basic Usage
+## Basic Usage ##
 
 <p align="center">
 <img src="https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/figure1.jpg" alt="" width="500" height="550">
@@ -12,14 +11,13 @@ This script extracts information from VCF files, defines regions of recombinatio
 
 <p align="center">
   <sub>The pipline is build by Amina Bedrat (2016) at Curie Institut and Meiogenix 
-  (<a href="http://lemoslab.org">Nicolas Lab</a>).
+  (<a "https://curie.fr/personne/alain-nicolas">Nicolas Lab</a>).
   </a>
 </p>
 
 ![R](https://img.shields.io/badge/R-v3.6.0+-orange.svg)
 ![Python](https://img.shields.io/badge/python-v2.7+-blue.svg)
 [![License](https://img.shields.io/badge/license-GNU_v3-green.svg)](https://www.gnu.org/licenses/gpl-3.0.fr.html)
-------------
 
 
 ## Requirements & Obtaining ##
@@ -38,13 +36,14 @@ git clone https://Aminacurie@bitbucket.org/TardebAnima/meiogenix.git
 - [UGDR](#UGDR)
 - [Normalized Depth of Coverage](#NDoC)
 
-
+------------
+------------
 ## Galocal ##
 Galogal is a set of tools is used to map reads to the reference and call variants. The tools BWA, samtools, picard and GATK are used and need to be installed before running Galocal. 
 Importantly at the end of this step you will have a VCF file and a base level depth of coverage file.
 
 ### Run Galocal ###
-------------
+
 ```
 $./Galocal.sh
 
@@ -113,6 +112,7 @@ Options:
  
 
 #### Bug Reports & Feature Requests
-Contact me: bedrat.amina@gmail.com
+Contact me: bedrat.amina@gmail.com.
+
 Please use the [issue tracker](https://github.com/AnimaTardeb/Meiogenix-UGDR/issues) to report any bugs or file feature requests.
 

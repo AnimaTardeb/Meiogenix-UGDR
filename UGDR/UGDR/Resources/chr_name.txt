@@ -1,0 +1,16 @@
+ref|NC_001133|	chrI	
+ref|NC_001134|	chrII	
+ref|NC_001135|	chrIII	
+ref|NC_001136|	chrIV	
+ref|NC_001137|	chrV	
+ref|NC_001138|	chrVI	
+ref|NC_001139|	chrVII	
+ref|NC_001140|	chrVIII	
+ref|NC_001141|	chrIX	
+ref|NC_001142|	chrX	
+ref|NC_001143|	chrXI	
+ref|NC_001144|	chrXII	
+ref|NC_001145|	chrXIII	
+ref|NC_001146|	chrXIV	
+ref|NC_001147|	chrXV	
+ref|NC_001148|	chrXVI	

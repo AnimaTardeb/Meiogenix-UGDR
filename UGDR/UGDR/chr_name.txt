@@ -1,0 +1,17 @@
+ref|NC_001133|	chrI	Sc	ref|NC_001133|	chrI	Sk
+ref|NC_001134|	chrII	Sc	ref|NC_001134|	chrII	Sk
+ref|NC_001135|	chrIII	Sc	ref|NC_001135|	chrIII	Sk
+ref|NC_001136|	chrIV	Sc	ref|NC_001136|	chrIV	Sk
+ref|NC_001137|	chrV	Sc	ref|NC_001137|	chrV	Sk
+ref|NC_001138|	chrVI	Sc	ref|NC_001138|	chrVI	Sk
+ref|NC_001139|	chrVII	Sc	ref|NC_001139|	chrVII	Sk
+ref|NC_001140|	chrVIII	Sc	ref|NC_001140|	chrVIII	Sk
+ref|NC_001141|	chrIX	Sc	ref|NC_001141|	chrIX	Sk
+ref|NC_001142|	chrX	Sc	ref|NC_001142|	chrX	Sk
+ref|NC_001143|	chrXI	Sc	ref|NC_001143|	chrXI	Sk
+ref|NC_001144|	chrXII	Sc	ref|NC_001144|	chrXII	Sk
+ref|NC_001145|	chrXIII	Sc	ref|NC_001145|	chrXIII	Sk
+ref|NC_001146|	chrXIV	Sc	ref|NC_001146|	chrXIV	Sk
+ref|NC_001147|	chrXV	Sc	ref|NC_001147|	chrXV	Sk
+ref|NC_001148|	chrXVI	Sc	ref|NC_001148|	chrXVI	Sk
+ref|NC_001224|	chrmt	Sc	ref|NC_001224|	chrmt	Sk

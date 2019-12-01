@@ -10,8 +10,7 @@ This script extracts information from VCF files, defines regions of recombinatio
 </p>
 
 <p align="center">
-  <sub>The pipline is build by Amina Bedrat (2016) at Curie Institut and Meiogenix 
-  (<a "https://curie.fr/personne/alain-nicolas">Nicolas Lab</a>).
+  <sub>The pipline is build by Amina Bedrat (2016) at Curie Institut and Meiogenix.
   </a>
 </p>
 

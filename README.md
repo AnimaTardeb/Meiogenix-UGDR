@@ -26,7 +26,7 @@ This script extracts information from VCF files, defines regions of recombinatio
 * Varient Calling Files (VCF) ([More informations about VCF file format](http://www.1000genomes.org/wiki/Analysis/vcf4.0)).
 * To download UGDR, please use git to clone or download via:
 ```
-git clone https://Aminacurie@bitbucket.org/TardebAnima/meiogenix.git
+git clone https://github.com/AnimaTardeb/Meiogenix-UGDR.git
 
 ```
 

@@ -1,7 +1,7 @@
 # UGDR #
 
-This repository provides the UGDR pipeline that allows users to detect recombination between a reference/parent and a recombined yeast.
-This script extracts information from VCF files, defines regions of recombination, Calculate normalized depth of coverage and plot recombination and depth of coverage.
+UGDR, a pipeline to genotype the polymorphisms of complex hybrid/recombined genomes. 
+It is based on optimal mapping strategies of NGS reads, comparative analyses of the allelic ratio variation and read depth coverage.
 
 ## Basic Usage ##
 
@@ -55,8 +55,12 @@ Usage:
 ```
 
 ## UGDR ##
+The pipline is composed of 3 methods:
+* **UGDR**
+* **NDoC**
+* ** **
 
-UGDR a tool to  analyze alleles variation and identify regions ofrecombination in yeasts. This script compares two vcf files and extracts and plot recombination profile.
+UGDR analyzes alleles variation and identify regions of recombination in yeasts. This script compares two vcf files and plot the recombination profile.
 
 ### Run UGDR ###
 
@@ -77,13 +81,13 @@ Options:
 
 > To use more then one recombinant_VCFfile you should gather them in one repository and choose the option -I 
 
-### Description of output file  ###
+### Description of the output files  ###
 
-* -ParentalAlleles.txt : File summarize all the alleles present in the VCF file of the reference strain (reference_VCFfile). 
-* -RTGAlleles.txt : File summarize all the alleles presents in the VCF file of the RTG strain (RTG_VCFfile).
-* -InvarAllelels.txt : File with alleles that the ratio does not vary between RTGs and reference strain.  
-* -VarAlleles.txt : File with alleles that the ratio had varied between RTGs and reference strain.
-* -RR.txt : Recombination region file, it extracts all the possible recombined region.
+* -ParentalAlleles.txt : A file to summarize all the alleles present in the VCF file of the reference strain (reference_VCFfile). 
+* -RTGAlleles.txt : A file to summarize all the alleles presents in the VCF file of the RTG strain (RTG_VCFfile).
+* -InvarAllelels.txt : A file of alleles which ratio does not vary between reference and RTG strains.  
+* -VarAlleles.txt : A file of alleles which ratio varied between reference and RTG strains.
+* -RR.txt : Recombination region file, it extracts all possible recombined regions.
 
 ## Normalized Depth of Coverage ##
 

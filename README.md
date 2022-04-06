@@ -23,7 +23,7 @@ It is based on optimal mapping strategies of NGS reads, comparative analyses of 
 ## Requirements & Obtaining ##
 
 * Python 2.7 and higher. 
-* Samtools, BWA, Picard and freebayes
+* Samtools, BWA, GATK and freebayes
 * Varient Calling Files (VCF) ([More informations about VCF file format](http://www.1000genomes.org/wiki/Analysis/vcf4.0)).
 * To download UGDR, please use git to clone or download via:
 ```
@@ -38,9 +38,10 @@ git clone https://github.com/AnimaTardeb/Meiogenix-UGDR.git
 
 ------------
 
+
 ## Galocal ##
-Galogal is a set of tools is used to map reads to a reference enome and call variants. The tools BWA, samtools, picard and GATK are used and need to be installed before running Galocal. 
-Importantly at the end of this step you will have a VCF file and a base level depth of coverage file.
+Galocal is a set of tools used to map reads to a reference genome and call variants. The tools BWA, samtools, GATK and freebayes are used and need to be installed before running Galocal. 
+Importantly at the end of this step, Galocal you will output in the results folder: VCF file and a base level depth of coverage file.
 
 ### Run Galocal ###
 
@@ -48,7 +49,7 @@ Importantly at the end of this step you will have a VCF file and a base level de
 $./Galocal.sh
 
 Usage: 
- ./Galocal.sh -a Fasta -b FQ_folder -c Result_folder
+ ./Galocal.sh -a Fasta -b Fq_folder -c Result_folder
 	-a S288 or other fasta sequence
 	-b Folder where the reads (R_1.fq and R_2.fq) are stocked
 	-c Folder to out put the results

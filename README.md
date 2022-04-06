@@ -1,6 +1,7 @@
 # UGDR #
 
-UGDR, a pipeline to genotype the polymorphisms of complex hybrid/recombined genomes. 
+UGDR is a pipeline to genotype the polymorphisms of complex hybrid/recombined genomes. 
+
 It is based on optimal mapping strategies of NGS reads, comparative analyses of the allelic ratio variation and read depth coverage.
 
 ## Basic Usage ##

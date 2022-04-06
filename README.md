@@ -39,7 +39,7 @@ git clone https://github.com/AnimaTardeb/Meiogenix-UGDR.git
 ------------
 
 ## Galocal ##
-Galogal is a set of tools is used to map reads to the reference and call variants. The tools BWA, samtools, picard and GATK are used and need to be installed before running Galocal. 
+Galogal is a set of tools is used to map reads to a reference enome and call variants. The tools BWA, samtools, picard and GATK are used and need to be installed before running Galocal. 
 Importantly at the end of this step you will have a VCF file and a base level depth of coverage file.
 
 ### Run Galocal ###

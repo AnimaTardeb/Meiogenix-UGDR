@@ -11,7 +11,7 @@ It is based on optimal mapping strategies of NGS reads, comparative analyses of 
 </p>
 
 <p align="center">
-  <sub> UGDR workflow.
+  <sub> UGDR workflow: a) Galocal, b) UGDR, c) NDoC.
   </a>
 </p>
 
@@ -91,7 +91,7 @@ Options:
 
 Normalized Depth of Coverage (NDoC) analyzes alleles coverage and identifies regions of coverage variation. The inputs are two depth of coverage files generated for UGDR. The per chromosome depth profile (strain__normalizedXKb.txt) is generated at the end.
 
-> default XKB = 1KB: Normalized by 1kb.
+> default xKB = 1KB: Normalized by 1kb.
 
 ### Run NDoC ###
 

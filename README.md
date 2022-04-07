@@ -11,7 +11,7 @@ It is based on optimal mapping strategies of NGS reads, comparative analyses of 
 </p>
 
 <p align="center">
-  <sub>The pipline is build by Amina Bedrat (2016) at Curie Institut and Meiogenix.
+  <sub> UGDR workflow.
   </a>
 </p>
 

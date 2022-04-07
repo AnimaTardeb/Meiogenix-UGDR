@@ -41,7 +41,7 @@ git clone https://github.com/AnimaTardeb/Meiogenix-UGDR.git
 
 ## Galocal ##
 Galocal is a set of tools used to map reads to a reference genome and call variants. The tools BWA, samtools, GATK and freebayes are used and need to be installed before running Galocal. 
-Importantly at the end of this step, Galocal you will output in the results folder: VCF file and a base level depth of coverage file.
+Importantly at the end of this step, Galocal you will output in the results folder: a VCF file and base level depth of coverage file.
 
 ### Run Galocal ###
 
@@ -57,12 +57,8 @@ Usage:
 ```
 
 ## UGDR ##
-The pipline is composed of 3 methods:
-* **UGDR**
-* **NDoC**
-* ** **
 
-UGDR analyzes alleles variation and identify regions of recombination in yeasts. This script compares two vcf files and plot the recombination profile.
+UGDR analyzes the alleles variation and identify regions of recombination in yeasts. This script compares two vcf files and plot the recombination profile.
 
 ### Run UGDR ###
 
@@ -76,14 +72,14 @@ Options:
   --version       show program's version number and exit
   -h, --help      show this help message and exit
   -i, --REC_rep   Folder of more than one recombinant to test
-  -I, --REC_file  One recombinant (VCF file) to test (REC)
-  -j, --par_file  Reference (VCF) file
+  -I, --REC_file  **One** recombinant (VCF file) to test (recombined strain)
+  -j, --par_file  Reference (VCF) file (reference strain)
   -o, --out_dir   Results folder 
 ```
 
-> To use more then one recombinant_VCFfile you should gather them in one repository and choose the option -I 
+> For analysing more than one recombinant_VCFfile choose the option -I .
 
-### Description of the output files  ###
+### Description of the output  ###
 
 * -ParentalAlleles.txt : A file to summarize all the alleles present in the VCF file of the reference strain (reference_VCFfile). 
 * -RTGAlleles.txt : A file to summarize all the alleles presents in the VCF file of the RTG strain (RTG_VCFfile).
@@ -93,7 +89,7 @@ Options:
 
 ## Normalized Depth of Coverage ##
 
-Normalized Depth of Coverage (NDoC), a tool to analyze alleles coverage and identify regions of coverage variation. The inputs are two depth of coverage files generated for UGDR. The per chromosome depth profile (strain__normalizedXKb.txt) is generated at the end.
+Normalized Depth of Coverage (NDoC) analyzes alleles coverage and identifies regions of coverage variation. The inputs are two depth of coverage files generated for UGDR. The per chromosome depth profile (strain__normalizedXKb.txt) is generated at the end.
 
 > default XKB = 1KB: Normalized by 1kb.
 

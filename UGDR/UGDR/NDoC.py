@@ -221,20 +221,39 @@ def main(argv):
     parser.add_option("-i", "--ref_f", default=None, action="store_true",help="Depth of coverage file of the reference strain")
     parser.add_option("-j", "--RTG_f", default=None, action="store_true",help="Depth of coverage file of Recombined strain ")
     parser.add_option("-o", "--out_dir", default=False, action="store_true",help="Results repository")
+    parser.add_option("-c",dest ="num",  help="Mean depth of covrage per k kb")
+
     
-    (opts, args) = parser.parse_args() 
+    (options, args) = parser.parse_args()
+    
+    #to check the -c argument
+    
+    if (options.num == None):
+            print (parser.usage)
+            exit(0)
+    else:
+            number = options.num
+
+    #yes 3 arg the number is non i don't know why
     if len(args) != 3:
-        print "\n"
+        parser.error("ERROR")
         parser.print_help()
         exit(1)
+
     parfile     =   args[0]
     rtgfile     =   args[1]
     outputDir   =   args[2]
-    return  parfile,rtgfile, outputDir
+    Meandepth   =   number
+
+
+    return  parfile,rtgfile, outputDir, int(Meandepth)
+    
+    
+    
+    
 #================================================================
 if __name__ == "__main__":
-    parfile, RTGdoc, outputDir= main(sys.argv[1:])
-    
+    parfile, RTGdoc, outputDir , Meandepth= main(sys.argv[1:])
     #================================================================
     # These spliting to get file name is specific for the file generated
     # by Glocal or the file name should be : nameoFinterest.anythink.anythink
@@ -256,12 +275,14 @@ if __name__ == "__main__":
         print "#######################################################################"
         print "#    "+OutDirname+" directory  already exist                           "
         print "#    "+OutDirname+" Crushed                                            "
+        print "# Calculate the mean Depth of coverage per "+str(Meandepth)+" KB         "
         print "#    New Results directory Created                                     "
         print "#######################################################################"
     else:
         os.makedirs(outputDir+"/"+OutDirname+"/", mode=0777)
         print "########################################################################"
         print "#        "+OutDirname+" directory Created                              #"
+        print "# Calculate the mean Depth of coverage per "+str(Meandepth)+" KB         "
         print "########################################################################"
     #================================================================
     #================================================================
@@ -272,22 +293,21 @@ if __name__ == "__main__":
         
         filein      =    open(parfile,"r")
         filein2     =    open(RTGdoc, "r")
-        
         ##################################################################
         filechrnamePath = os.path.dirname(os.path.realpath(__file__)) + "/chr_name.txt"
         chromosome_name,nameSC, nameSK, S1, S2 = read_chrname(filechrnamePath)
         ##################################################################
         print "Reference DOC file: ",Pfilename
-        Dic_parental_one, covparental   =   ReadDCOVFile(filein, 1000, Res1file)
+        Dic_parental_one, covparental   =   ReadDCOVFile(filein, Meandepth, Res1file)
         print "\nRecombined DOC file: ",filename
-        Dic_RTG_one, covRTG             =   ReadDCOVFile(filein2, 1000, Res2file)
+        Dic_RTG_one, covRTG             =   ReadDCOVFile(filein2, Meandepth, Res2file)
 
         #Compile chromosome name
         Dic_parental    =   convertDic(Dic_parental_one,nameSC ,nameSK, S1, S2)
         Dic_RTG         =   convertDic(Dic_RTG_one,nameSC ,nameSK, S1, S2)
 
 
-        NEWDIC  = Mean_dofcov_kb(Dic_parental, Dic_RTG,covparental, covRTG , Res3file, 1000)
+        NEWDIC  = Mean_dofcov_kb(Dic_parental, Dic_RTG,covparental, covRTG , Res3file, Meandepth)
         Res3file.close()
         #Representation
         
@@ -310,7 +330,6 @@ if __name__ == "__main__":
 
     filein.close()
     filein2.close()
-
 
 ######################################################################
 ######################################################################

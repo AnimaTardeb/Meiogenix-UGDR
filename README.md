@@ -82,6 +82,35 @@ Options:
 
 ```
 $./UGDR.py -I ../DATA/Tetradploids/SRR3265444/SRR3265444.vcf -j ../DATA/Tetradploids/SRR3265445/SRR3265445.vcf -o /DATA 
+
+########################################################################
+#        Results-SRR3265444 directory Created                              #
+########################################################################
+
+Reference file is proceeded. Alleles are summarized in -ReferencelAllele.txt file 
+snp  :  75118
+del  :  2120
+complex  :  2598
+ins  :  2041
+mnp  :  916
+_______________________________________________________________
+
+Recombined file (REC) is proceeded. Alleles are summarized in -RECAllele.txt file
+
+snp  :  79345
+del  :  2217
+complex  :  2673
+ins  :  2116
+mnp  :  967
+_______________________________________________________________
+
+ Computing Ratio with Qual >= 200 and AO >= 20 (you can modify the Qual and AO in SNPdistribution.py lines 234, 235 and 259).
+
+_______________________________________________________________
+
+ Extracting Recombined regions  
+/DATA/Results-SRR3265444/
+
 ```
 
 > For analysing more than one recombinant_VCFfile choose the option -I .
@@ -93,6 +122,7 @@ $./UGDR.py -I ../DATA/Tetradploids/SRR3265444/SRR3265444.vcf -j ../DATA/Tetradpl
 * -InvarAllelels.txt : A file of alleles which ratio does not vary between reference and RTG strains.  
 * -VarAlleles.txt : A file of alleles which ratio varied between reference and RTG strains.
 * -RR.txt : Recombination region file, it extracts all possible recombined regions.
+* the PDF output representing the recombination
 
 ## Normalized Depth of Coverage ##
 

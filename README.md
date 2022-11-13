@@ -1,8 +1,6 @@
 # UGDR #
 
-UGDR is a pipeline to detect recombination in complex hybrid/recombined yeast genomes (<=4n). 
-
-It is based on alleles ratio comparative analyses  and read depth coverage obtained from NGS reads.
+UGDR is a pipeline to detect recombination in complex hybrid/recombined yeast genomes (<=4n). It is based on alleles ratio comparative analyses  and read depth coverage obtained from NGS reads.
 
 ## Basic Usage ##
 
@@ -40,7 +38,7 @@ git clone https://github.com/AnimaTardeb/Meiogenix-UGDR.git
 
 
 ## Galocal ##
-Galocal is a bash script to run: BWA, samtools, GATK and freebayes; a set of tools used for mapping reads to a reference genome, calling variants and calculate the depth of covrage. A prior installation of those tools in needed before running Galocal. 
+Galocal is a bash script used to map reads to a reference genome, call variants and calculate the depth of covrage. A prior installation of those tools in needed before running Galocal ([Markdown - Link](#Requirements & Obtaining)). 
 
 Importantly at the end of this step, Galocal you will output in the results folder: a VCF file and base level depth of coverage file.
 If VCF files and/or depth of coverage files are already present the used can excap this step. 

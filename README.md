@@ -40,8 +40,9 @@ git clone https://github.com/AnimaTardeb/Meiogenix-UGDR.git
 ## Galocal ##
 Galocal is a bash script used to map reads to a reference genome, call variants and calculate the depth of covrage. A prior installation of those tools in needed before running Galocal [See here ](#Requirements). 
 
-Importantly at the end of this step, Galocal you will output in the results folder: a VCF file and base level depth of coverage file.
-If VCF files and/or depth of coverage files are already present the used can excap this step. 
+Importantly at the end of this step, Galocal you will output in the result folder : a VCF file and base level depth of coverage file.
+
+If VCF files and/or depth of coverage files are already present the user directly run [UGDR ](#UGDR). 
 
 ### Run Galocal ###
 
@@ -75,6 +76,12 @@ Options:
   -I, --REC_file  **One** recombinant (VCF file) to test (recombined strain)
   -j, --par_file  Reference (VCF) file (reference strain)
   -o, --out_dir   Results folder 
+```
+
+> To run an example: 
+
+```
+$./UGDR.py -I ../DATA/Tetradploids/SRR3265444/SRR3265444.vcf -j ../DATA/Tetradploids/SRR3265445/SRR3265445.vcf -o /DATA 
 ```
 
 > For analysing more than one recombinant_VCFfile choose the option -I .

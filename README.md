@@ -5,7 +5,7 @@ UGDR is a pipeline to detect recombination in complex hybrid/recombined yeast ge
 ## Basic Usage ##
 
 <p align="center">
-<img src="https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/figure1.jpg" alt="" width="500" height="550">
+<img src="https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/figure1.tiff" alt="" width="500" height="550">
 </p>
 
 <p align="center">

@@ -187,11 +187,7 @@ $ cat Alleles-rep-tetrad.R | /usr/local/bin/R --slave --args ../../DATA/VCF-tetr
 ```
 
 
-[See tetrads]([See tetrads](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf)) directly 
-<p align="center">
-<img src="https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf" alt="" width="500" height="650">
-</p>
-
+the out put is ([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf)) 
 
 
 To plot Two yeasts (a, b), the Alleles-Rep-MD-DoC.R needs : 
@@ -213,6 +209,7 @@ $ cat Alleles-Rep-MD-DoC.R | /usr/local/bin/R --slave --args ../../DATA/Triploid
 [1] "../../DATA/Tripltetraploids.pdf"
 
 ```
+the out put is ([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/Tripltetraploids.pdf)) 
 
 
 

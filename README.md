@@ -187,7 +187,7 @@ $ cat Alleles-rep-tetrad.R | /usr/local/bin/R --slave --args ../../DATA/VCF-tetr
 ```
 
 
-[get the PDF]({{ site.url }}[/assets/mydoc.pdf](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf)) directly 
+[See tetrads]([See tetrads](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf)) directly 
 <p align="center">
 <img src="https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf" alt="" width="500" height="650">
 </p>

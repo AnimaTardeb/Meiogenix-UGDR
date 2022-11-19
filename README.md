@@ -54,7 +54,6 @@ Usage:
 	-a S288 or other fasta sequence
 	-b Folder where the reads (R_1.fq and R_2.fq) are stocked
 	-c Folder to out put the results
- 
 ```
 
 ## UGDR ##
@@ -111,7 +110,6 @@ _______________________________________________________________
 
  Extracting Recombined regions  
 /DATA/Results-SRR3265444/
-
 ```
 
 > For analysing more than one recombinant_VCFfile choose the option -I .
@@ -160,8 +158,6 @@ Number of base : 12015280
 Recombined DOC file:  DoCBeta
 Number of base : 12015280 
  Total Mean of Coverage:  124.255924207
-null device 
-          1 
 
 ```
 
@@ -188,7 +184,6 @@ $ cat Alleles-rep-tetrad.R | /usr/local/bin/R --slave --args ../../DATA/VCF-tetr
 [1] " "
 [1] "PDF plot generated in "
 [1] "../../DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf"
-
 ```
 
 To plot Two yeasts (a, b), the Alleles-Rep-MD-DoC.R needs : 
@@ -197,9 +192,9 @@ To plot Two yeasts (a, b), the Alleles-Rep-MD-DoC.R needs :
 * Normalized depth of coverage file for the yeast a
 * Normalized depth of coverage file for the yeast b
 
-a, b could be mother and dauther, Parent1 and parent 2 or Two different cells e.g. triploid and tetraploid.
-```
+>a, b could be mother and dauther, Parent1 and parent 2 or Two different cells e.g. triploid and tetraploid.
 
+```
 $ cat Alleles-Rep-MD-DoC.R | /usr/local/bin/R --slave --args ../../DATA/Triploids/Triploids-S288C/Results-SRR3265371 ../../DATA/Tetradploids/Results-SRR3265445-ref44   ../../DATA/Triploids/Triploids-S288C/DepthOfCov-Results-SRR3265371/SRR3265371__normalized10kb.txt ../../DATA/Tetradploids/DepthOfCov-Results-SRR3265445/SRR3265445__normalized1kb.txt ../../DATA/Tripltetraploids.pdf
 
 
@@ -208,10 +203,6 @@ $ cat Alleles-Rep-MD-DoC.R | /usr/local/bin/R --slave --args ../../DATA/Triploid
 [1] "../../DATA/Tetradploids/Results-SRR3265445-ref44"
 [1] " PDF plot generated in "
 [1] "../../DATA/Tripltetraploids.pdf"
-
-
-
-
 
 ```
 

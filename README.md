@@ -42,7 +42,7 @@ Galocal is a bash script used to map reads to a reference genome, call variants 
 
 Importantly at the end of this step, Galocal you will output in the result folder : a VCF file and base level depth of coverage file.
 
-If VCF files and/or depth of coverage files are already present the user directly run [UGDR ](#UGDR). 
+If VCF files and/or depth of coverage files are already present the user might skip this part and directly run [UGDR ](#UGDR). 
 
 ### Run Galocal ###
 
@@ -172,6 +172,51 @@ null device
 * results of the depth of coverage in a pdf file 
 *  PDF : plot of depth of coverage  
  
+### Plot Recombination ###
+
+In addition to the plots created by UGDR and NDoC you can use to plot Mother and Daughter or the four tetrads in one figure. 
+
+```
+$ cd UGDR 
+$ cat Alleles-rep-tetrad.R | /usr/local/bin/R --slave --args ../../DATA/VCF-tetrads/Tetrads-S288c-Results/ ../../DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf 
+
+[1] "Reading : "
+[1] "../../DATA/VCF-tetrads/Tetrads-S288c-Results//Results-SRR2984915"
+[1] "../../DATA/VCF-tetrads/Tetrads-S288c-Results//Results-SRR2984916"
+[1] "../../DATA/VCF-tetrads/Tetrads-S288c-Results//Results-SRR2984917"
+[1] "../../DATA/VCF-tetrads/Tetrads-S288c-Results//Results-SRR2984918"
+[1] " "
+[1] "PDF plot generated in "
+[1] "../../DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf"
+
+```
+
+To plot Two yeasts (a, b), the Alleles-Rep-MD-DoC.R needs : 
+* UGDR result folder for the yeast a
+* UGDR result folder for the yeast b
+* Normalized depth of coverage file for the yeast a
+* Normalized depth of coverage file for the yeast b
+
+a, b could be mother and dauther, Parent1 and parent 2 or Two different cells e.g. triploid and tetraploid.
+```
+
+$ cat Alleles-Rep-MD-DoC.R | /usr/local/bin/R --slave --args ../../DATA/Triploids/Triploids-S288C/Results-SRR3265371 ../../DATA/Tetradploids/Results-SRR3265445-ref44   ../../DATA/Triploids/Triploids-S288C/DepthOfCov-Results-SRR3265371/SRR3265371__normalized10kb.txt ../../DATA/Tetradploids/DepthOfCov-Results-SRR3265445/SRR3265445__normalized1kb.txt ../../DATA/Tripltetraploids.pdf
+
+
+[1] "Reading : "
+[1] "../../DATA/Triploids/Triploids-S288C/Results-SRR3265371"
+[1] "../../DATA/Tetradploids/Results-SRR3265445-ref44"
+[1] " PDF plot generated in "
+[1] "../../DATA/Tripltetraploids.pdf"
+
+
+
+
+
+```
+
+
+
 
 ### Bug Reports & Requests
 

@@ -185,6 +185,11 @@ $ cat Alleles-rep-tetrad.R | /usr/local/bin/R --slave --args ../../DATA/VCF-tetr
 [1] "PDF plot generated in "
 [1] "../../DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf"
 ```
+<p align="center">
+<img src="https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/VCF-tetrads/Tetrads-S288c-Results/PlotTetradsS288c.pdf" alt="" width="500" height="650">
+</p>
+
+
 
 To plot Two yeasts (a, b), the Alleles-Rep-MD-DoC.R needs : 
 * UGDR result folder for the yeast a

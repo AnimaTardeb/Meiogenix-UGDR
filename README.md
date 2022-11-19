@@ -1,6 +1,6 @@
 # UGDR #
 
-UGDR is a pipeline to detect recombination in complex hybrid/recombined yeast genomes (<=4n). It is based on alleles ratio comparative analyses  and read depth coverage obtained from NGS reads.
+UGDR is a pipeline that analyzes variations in SNP frequency to detect recombination and foster visualization of recombination tracks in natural and/or constructed hybrid yeast genomes. The detection of recombination in haploid (tetrads), diploid, aneuploidy and polyploid yeasts (limited to 4n) is achieved regardless of the ploidy of the yeast and the parental genome. UGDR also addresses the challenge of the continuous variation of the allele frequencies along with chromosomal loss and gain.
 
 ## Basic Usage ##
 

@@ -28,19 +28,25 @@ def main(argv):
     parser = optparse.OptionParser(usage='\033[1m' +"\npython %prog [options] REC_vcf_file [options] Reference_vcf_file [options] output_Repository \n"+"\033[0;0m", version="%prog 0.75",
         description='\033[1m' +"UGDR for analyzing alleles variation and identifing regions of recombination in yeast. This script requires two vcf files format to be compared and to extract the regions of recombination.")
     parser.add_option("-i", "--REC_rep", default=None, action="store_true",
-        help="Folder of more than one recombinant to test "
-    )
+        help="Folder of more than one recombinant to test ")
     parser.add_option("-I", "--REC_file", default=None, action="store_true",
-        help="One recombinant (VCF file) to test (REC)"
-    )
+        help="One recombinant (VCF file) to test (REC)")
     parser.add_option("-j", "--par_file", default=False, action="store_true",
-        help="Reference (VCF) file"
-    )
+        help="Reference (VCF) file")
     parser.add_option("-o", "--out_dir", default=False, action="store_true",
-        help="Results folder "+"\033[0;0m" +"\n\n"
-    )
+        help="Results folder ")
+    
+    parser.add_option("-c","--DPQUAL", dest ="num",  help="Filter applied on DP for 80X use 200"+"\033[0;0m" +"\n\n")
 
-    (opts, args) = parser.parse_args() 
+    (options, args) = parser.parse_args()
+    #to check the -c argument
+    
+    if (options.num == None):
+            print (parser.usage)
+            exit(0)
+    else:
+            number = options.num
+
     if len(args) != 3:
         print "\n"
         parser.print_help()
@@ -48,12 +54,13 @@ def main(argv):
     RECr      =   args[0]
     parfile     =   args[1]
     outputDir   =   args[2]
-    RECfile     =   opts.REC_file
-    return  RECr, parfile, outputDir, RECfile
+    RECfile     =   options.REC_file
+    QUAL   =   number
+    return  RECr, parfile, outputDir, RECfile, int(QUAL)
 #================================================================
 if __name__ == "__main__":
     
-    RECrep, parfile, outputDir, RECfile = main(sys.argv[1:])
+    RECrep, parfile, outputDir, RECfile, QUAL = main(sys.argv[1:])
     #================================================================
     # In the case you use repository of VCF files -i
     #================================================================    
@@ -91,7 +98,7 @@ if __name__ == "__main__":
                 filein      =    open (parfile,"r")
                 filein2     =    open (RECrep+"/"+i, "r")
         
-                SNPdistribution.execute(filein, filein2,AlleleL1file,AlleleRECfile, Res1file, Res2file, Res3file, Res4file)
+                SNPdistribution.execute(filein, filein2,AlleleL1file,AlleleRECfile, Res1file, Res2file, Res3file, Res4file, QUAL)
             
                 ResRep= outputDir +"/"+OutDirname+"/"
                 print ResRep
@@ -160,7 +167,7 @@ if __name__ == "__main__":
             filein      =    open(parfile,"r")
             filein2     =    open(RECrep, "r")
 
-            SNPdistribution.execute(filein, filein2,AlleleL1file,AlleleRECfile, Res1file, Res2file, Res3file, Res4file)
+            SNPdistribution.execute(filein, filein2,AlleleL1file,AlleleRECfile, Res1file, Res2file, Res3file, Res4file, QUAL)
             Res1file.close()
             Res2file.close()
             Res3file.close()

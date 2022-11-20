@@ -212,7 +212,7 @@ def Compute_ratio(dicP, dicRECb, fileout1, fileout2, Q, AO, Lname): #n =3 et k=4
 ## execution methodes
 ##############################################################################
 
-def execute(filein1, filein2,AllelePfile,AlleleRECbfile, fileout1, fileout2, fileout3, fileout4):
+def execute(filein1, filein2,AllelePfile,AlleleRECbfile, fileout1, fileout2, fileout3, fileout4, QUAL):
     #--------------------------------------------------------
     #Read file of chromosome name
     #--------------------------------------------------------
@@ -231,8 +231,8 @@ def execute(filein1, filein2,AllelePfile,AlleleRECbfile, fileout1, fileout2, fil
     #--------------------------------------------------------
     #Extract Variant and Unvariant alleles > Qual and >AO
     #--------------------------------------------------------
-    DicSNPP,DicDELP,DicComP,DicInsP,DicMnpP    =   Extract_Alleles(DicParent,LChrName, 200, 20,DicRepReg, 1)
-    DicSNP,DicDEL,DicCom,DicIns,DicMnp  =   Extract_Alleles(DicRECb,LChrName, 200, 20,DicRepReg, 1)
+    DicSNPP,DicDELP,DicComP,DicInsP,DicMnpP    =   Extract_Alleles(DicParent,LChrName, QUAL, 20,DicRepReg, 1)
+    DicSNP,DicDEL,DicCom,DicIns,DicMnp  =   Extract_Alleles(DicRECb,LChrName, QUAL, 20,DicRepReg, 1)
     
     #--------------------------------------------------------
     print "\nReference file is proceeded. Alleles are summarized in -ReferencelAllele.txt file "
@@ -253,10 +253,10 @@ def execute(filein1, filein2,AllelePfile,AlleleRECbfile, fileout1, fileout2, fil
     ReWr.distribution_alleles(DicMnp,AlleleRECbfile)
     #--------------------------------------------------------
     print "_______________________________________________________________\n"
-    print " Computing Ratio with Qual >= 200 and AO >= 20 (you can modify the Qual and AO in SNPdistribution.py lines 234, 235 and 259).\n"
+    print " Computing Ratio with Qual >= ", QUAL, "and AO >= 20 (you can modify the Qual and AO in SNPdistribution.py lines 234, 235 and 259).\n"
     #--------------------------------------------------------
     #print DicSNP
-    ListeP, ListeVH=Compute_ratio(DicSNPP, DicSNP, fileout1, fileout2, 200,20, LChrName)
+    ListeP, ListeVH=Compute_ratio(DicSNPP, DicSNP, fileout1, fileout2, QUAL,20, LChrName)
 
     print "_______________________________________________________________\n"
     print " Extracting Recombined regions  "

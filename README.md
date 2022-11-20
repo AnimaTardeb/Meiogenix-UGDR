@@ -59,6 +59,8 @@ Usage:
 ## UGDR ##
 
 UGDR analyzes the alleles variation and identify regions of recombination in yeasts. This script compares two vcf files and plot the recombination profile.
+> Note: the depth of the base across the samples is now a parameter that the user can change to adapt it to their sequencing depth.
+In this example we are running UGDR with a DP = 200 (-c 200)
 
 ### Run UGDR ###
 
@@ -75,13 +77,15 @@ Options:
   -I, --REC_file  **One** recombinant (VCF file) to test (recombined strain)
   -j, --par_file  Reference (VCF) file (reference strain)
   -o, --out_dir   Results folder 
+  -c NUM, --DPQUAL=NUM  Filter applied on DP for 80X use 200
+
 ```
 
 To run an example: 
 
 ```
 
-$./UGDR.py -I ../../DATA/Tetradploids/SRR3265444/SRR3265444.vcf -j ../../DATA/Tetradploids/SRR3265445/SRR3265445.vcf -o ../../DATA
+$./UGDR.py -I ../../DATA/Tetradploids/SRR3265444/SRR3265444.vcf -j ../../DATA/Tetradploids/SRR3265445/SRR3265445.vcf -o ../../DATA -c 200
 
 ########################################################################
 #        Results-SRR3265444 directory Created                              #
@@ -112,6 +116,7 @@ _______________________________________________________________
 /DATA/Results-SRR3265444/
 ```
 
+> See result ([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/Tetradploids/Results-SRR3265445-ref44/SRR3265445.pdf)
 > For analysing more than one recombinant_VCFfile choose the option -I .
 
 ### Description of the output  ###
@@ -167,7 +172,9 @@ Number of base : 12015280
 * strain__normalizedxKb.txt : Normalized depth of covrage used to plot the depth of coverage
 * results of the depth of coverage in a pdf file 
 *  PDF : plot of depth of coverage  
- 
+
+> See result ([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/NDof-Files/DepthOfCov-Results-DoCBeta/DoCBeta.pdf)
+
 ### Plot Recombination ###
 
 In addition to the plots created by UGDR and NDoC you can use to plot Mother and Daughter or the four tetrads in one figure. 

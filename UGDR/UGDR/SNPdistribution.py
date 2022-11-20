@@ -2,7 +2,7 @@
 #####################################################################################
 #####################################################################################
 # -*- coding: utf8 -*-
-# This file is part of R2D2-BA
+# This file is part of UGDR-BA
 # This script extracts informations from VCF files to give a human readable
 # files resuming alleles variations, and defining region of recombination.
 # Copyright (C) 2016 Bedrat Amina - Institut Curie - Meiogenix

@@ -117,7 +117,6 @@ _______________________________________________________________
 /DATA/Results-SRR3265444/
 ```
 
-> For analysing more than one recombinant_VCFfile choose the option -I.
 > See result([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/Tetradploids/Results-SRR3265445-ref44/SRR3265445.pdf))
 
 ### Description of the output  ###

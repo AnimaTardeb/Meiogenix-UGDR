@@ -59,6 +59,7 @@ Usage:
 ## UGDR ##
 
 UGDR analyzes the alleles variation and identify regions of recombination in yeasts. This script compares two vcf files and plot the recombination profile.
+
 > Note: the depth of the base across the samples is now a parameter that the user can change to adapt it to their sequencing depth.
 In this example we are running UGDR with a DP = 200 (-c 200)
 
@@ -116,7 +117,7 @@ _______________________________________________________________
 /DATA/Results-SRR3265444/
 ```
 
-> See result ([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/Tetradploids/Results-SRR3265445-ref44/SRR3265445.pdf)
+> See result([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/Tetradploids/Results-SRR3265445-ref44/SRR3265445.pdf))
 > For analysing more than one recombinant_VCFfile choose the option -I .
 
 ### Description of the output  ###
@@ -173,7 +174,7 @@ Number of base : 12015280
 * results of the depth of coverage in a pdf file 
 *  PDF : plot of depth of coverage  
 
-> See result ([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/NDof-Files/DepthOfCov-Results-DoCBeta/DoCBeta.pdf)
+> See result ([here](https://github.com/AnimaTardeb/Meiogenix-UGDR/blob/master/DATA/NDof-Files/DepthOfCov-Results-DoCBeta/DoCBeta.pdf))
 
 ### Plot Recombination ###
 
